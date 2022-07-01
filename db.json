@@ -1,0 +1,41 @@
+{
+  "tutor": [
+    {
+      "id": 1,
+      "nome": "Antonio",
+      "email": "antonio@email.com",
+      "senha": "senha123",
+      "idAlfabetizando": [
+        1,
+        2,
+        4
+      ]
+    }
+  ],
+  "alfabetizando": [
+    {
+      "nome": "Rafael",
+      "nivel": 1,
+      "atividade": "inicio 1",
+      "id": 1
+    },
+    {
+      "nome": "Joana",
+      "nivel": 1,
+      "atividade": "inicio 1",
+      "id": 2
+    },
+    {
+      "nome": "gggggg",
+      "nivel": 1,
+      "atividade": "inicio 1",
+      "id": 3
+    },
+    {
+      "nome": "Luciana",
+      "nivel": 1,
+      "atividade": "inicio 1",
+      "id": 4
+    }
+  ]
+}

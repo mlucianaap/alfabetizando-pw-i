@@ -1,0 +1,45 @@
+#container1 {
+    display: flex;
+    align-items: center;
+}
+
+#container2 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.body {
+    padding: 50px 200px 20px 200px;
+}
+
+#cadastro {
+    width: 85%;
+}
+
+.cadastro {
+    margin: 0px 10px 10px 0px;
+}
+
+.acoes {
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 820px) {
+    .body {
+        padding: 20px 20px 20px 20px;
+    }
+    
+    #cadastro {
+        width: 100%;
+    }
+    
+    .cadastro {
+        margin: 0px 10px 0px 0px;
+    }
+
+    #cadastro {
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
