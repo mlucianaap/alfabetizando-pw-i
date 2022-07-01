@@ -7,8 +7,7 @@
       "senha": "senha123",
       "idAlfabetizando": [
         1,
-        2,
-        4
+        2
       ]
     }
   ],
@@ -21,21 +20,9 @@
     },
     {
       "nome": "Joana",
-      "nivel": 1,
+      "nivel": 2,
       "atividade": "inicio 1",
       "id": 2
-    },
-    {
-      "nome": "gggggg",
-      "nivel": 1,
-      "atividade": "inicio 1",
-      "id": 3
-    },
-    {
-      "nome": "Luciana",
-      "nivel": 1,
-      "atividade": "inicio 1",
-      "id": 4
     }
   ]
 }
