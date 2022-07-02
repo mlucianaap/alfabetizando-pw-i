@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AlfabetizandoService } from './alfabetizando.service';
 import { Router } from '@angular/router';
 
-import {Message, MessageService} from 'primeng/api';
+import {Message, MessageService } from 'primeng/api';
 import { MessagesModule } from "primeng/messages";
 
 @Component({
@@ -40,9 +40,7 @@ export class ManterAlfabetizandoComponent implements OnInit {
         value.idAlfabetizando.forEach( (valor: { idAlfabetizando: any; }) => {
           this.alfabetizandoService.consultar().then((alfabetizandos: any[]) => {
             alfabetizandos.forEach( (alfa: any) => {
-              if(alfa.id == valor ){
-                console.log(alfa);
-                
+              if(alfa.id == valor){
                 this.alfabetizandos.push(alfa)
               }
             });
@@ -59,10 +57,11 @@ export class ManterAlfabetizandoComponent implements OnInit {
     if(nome.length >= 3){
       this.alfabetizandoService.adicionar({ nome }).then(alfabetizando => {
         this.tutores.forEach( (value) => {
-          value.idAlfabetizando.push(alfabetizando.id)
-          this.alfabetizandoService.atualizarTutor(value)
-          this.messageService.add({severity:'success', summary:`O alfabetizando ${alfabetizando.nome} foi adicionado com sucesso!`, detail:''});
+          value.idAlfabetizando.push(alfabetizando.id);
+          this.alfabetizandoService.atualizarTutor(value);
+          console.log("entrou");
           this.consultar();
+          this.messageService.add({severity:'success', summary:`O alfabetizando ${alfabetizando.nome} foi adicionado com sucesso!`, detail:''});
         });
       })
       .catch(erro => {
@@ -76,7 +75,7 @@ export class ManterAlfabetizandoComponent implements OnInit {
   excluir(id: number) {
     this.alfabetizandoService.excluir(id).then(() => {
       this.tutores.forEach( (value) => {
-        value.idAlfabetizando.splice(value.id+1, 1)
+        value.idAlfabetizando.splice(value.idAlfabetizando.indexOf(id), 1)
         this.alfabetizandoService.atualizarTutor(value)
         this.messageService.addAll([{severity:'success', summary:'O Alfabetizando foi excluído com sucesso', detail:''}]);
         this.consultar();
